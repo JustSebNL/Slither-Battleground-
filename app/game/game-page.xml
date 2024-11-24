@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo" class="bg-black">
+    <ActionBar title="Snake Multiplayer" class="bg-purple-900 text-white" />
+    
+    <GridLayout rows="*, auto">
+        <!-- Game Canvas -->
+        <ContentView row="0" id="gameCanvas" class="bg-gray-900">
+            <!-- Snake and game elements will be drawn here -->
+        </ContentView>
+
+        <!-- Controls -->
+        <GridLayout row="1" columns="*, auto" class="p-4 bg-purple-900">
+            <!-- Score Display -->
+            <StackLayout col="0" orientation="horizontal" class="items-center">
+                <Label text="Score: " class="text-white text-lg" />
+                <Label text="{{ score }}" class="text-white text-lg font-bold" />
+            </StackLayout>
+
+            <!-- Joystick Area -->
+            <ContentView col="1" id="joystickArea" class="w-32 h-32 rounded-full bg-purple-800">
+                <!-- Joystick handle will be added dynamically -->
+            </ContentView>
+        </GridLayout>
+    </GridLayout>
+</Page>
